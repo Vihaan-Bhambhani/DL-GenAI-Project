@@ -7,7 +7,7 @@
 
 ---
 
-## Project Overview (tentative)
+## Project Overview 
 
 Build an AI system that, given a multiple-choice question with five options (A–E),
 predicts the **top three most probable answers** in ranked order. Submissions are
@@ -42,16 +42,6 @@ dl-genai-mcq-solver/
 
 ---
 
-## Links (to be filled in)
-
-| Resource | Link |
-|---|---|
-| Kaggle competition | <add link> |
-| Kaggle notebook | `DL-<YOUR_ROLL_NO>-notebook-t22026` |
-| Weights & Biases project | `<YOUR_ROLL_NO>-t22026` |
-| Hugging Face Space (optional bonus) | <add if deployed> |
-
----
 
 ## Git Workflow (mandatory — graded)
 
