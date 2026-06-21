@@ -43,7 +43,7 @@ dl-genai-mcq-solver/
 ---
 
 
-## Git Workflow (mandatory — graded)
+## Git Workflow
 
 The course enforces a milestone-branch workflow. `main` always holds the latest
 stable, working version. **No milestone work is committed directly to `main`**, and
