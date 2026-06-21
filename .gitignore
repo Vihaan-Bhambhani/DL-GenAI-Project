@@ -1,0 +1,20 @@
+# Python
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+.venv/
+venv/
+
+# Data & large artefacts (kept on Kaggle, not in git)
+data/*.csv
+data/*.parquet
+*.npy
+models/*.bin
+models/*.safetensors
+models/*.pt
+
+# W&B local cache
+wandb/
+
+# OS
+.DS_Store

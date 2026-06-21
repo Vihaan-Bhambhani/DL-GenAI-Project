@@ -1,0 +1,25 @@
+# Core
+numpy
+pandas
+scikit-learn
+scipy
+
+# Classical ML baseline (Model 1)
+lightgbm
+
+# Deep learning (Models 2, 3a, 3b)
+torch
+transformers
+peft
+trl
+datasets
+accelerate
+bitsandbytes
+sentencepiece
+
+# Retrieval (RAG stage)
+sentence-transformers
+faiss-cpu
+
+# Experiment tracking (required)
+wandb
