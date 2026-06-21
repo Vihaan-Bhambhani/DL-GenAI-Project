@@ -3,7 +3,7 @@
 **Course:** Introduction to DL and GenAI Project \
 **Name:** Vihaan Bhambhani \
 **Roll No:** 24f1002825 \
-**Term:** T2-2026 \
+**Term:** T2-2026 
 
 ---
 
