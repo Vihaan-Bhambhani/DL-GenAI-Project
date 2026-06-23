@@ -1,9 +1,9 @@
 # Smart MCQ Solver — Retrieval-Augmented Multiple-Choice Answer Ranking
 
-**Course:** Introduction to DL and GenAI Project (BSDA2001P)
-**Name:** Vihaan Bhambhani
-**Roll No:** 24f1002825
-**Term:** T2-2026
+**Course:** Introduction to DL and GenAI Project \
+**Name:** Vihaan Bhambhani \
+**Roll No:** 24f1002825 \
+**Term:** T2-2026 \
 
 ---
 
