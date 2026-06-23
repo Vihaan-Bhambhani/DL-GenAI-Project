@@ -1,8 +1,8 @@
 # Smart MCQ Solver — Retrieval-Augmented Multiple-Choice Answer Ranking
 
 **Course:** Introduction to DL and GenAI Project (BSDA2001P)
-**Name:** Parth Aggarwal
-**Roll No:** `<YOUR_ROLL_NO>`  <!-- e.g. 21f1001234 — replace before pushing -->
+**Name:** Vihaan Bhambhani
+**Roll No:** 24f1002825
 **Term:** T2-2026
 
 ---
