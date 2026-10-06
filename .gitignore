@@ -18,3 +18,6 @@ wandb/
 
 # OS
 .DS_Store
+
+# Streamlit local secrets
+**/.streamlit/secrets.toml

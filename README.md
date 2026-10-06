@@ -129,7 +129,7 @@ the models is disabled via `USE_RAG_CONTEXT = False`.
 ## Setup
 
 ```bash
-git clone https://github.com/24f1002825-VihaanB/DL-GenAI-Project.git
+git clone https://github.com/Vihaan-Bhambhani/DL-GenAI-Project.git
 cd DL-GenAI-Project
 python -m venv .venv && source .venv/bin/activate   # Windows: .venv\Scripts\activate
 pip install -r requirements.txt
