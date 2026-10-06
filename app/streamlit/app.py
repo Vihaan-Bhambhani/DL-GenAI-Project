@@ -1,4 +1,4 @@
-﻿"""Smart MCQ Solver â€” interactive demo of the Stage-A duplicate matcher.
+"""Smart MCQ Solver — interactive demo of the Stage-A duplicate matcher.
 
 Deploys the deterministic layer of the competition pipeline: TF-IDF near-
 duplicate matching against the training set, resolving the answer by matching
@@ -11,7 +11,7 @@ Stage A produces rank 1 on 479 of 500 test rows and scored 0.71446 standalone on
 the leaderboard, so it is both the largest single contributor and the only part
 that fits in a CPU container.
 
-Vihaan Bhambhani (24f1002825) Â· BSDA2001P T2-2026
+Vihaan Bhambhani (24f1002825) · BSDA2001P T2-2026
 """
 from __future__ import annotations
 
@@ -28,7 +28,7 @@ SIM_PIN = 0.93       # bar for a confident rank-1 pin
 SIM_RELAXED = 0.70   # lower bar, reported as low confidence
 TOPK = 25
 
-st.set_page_config(page_title="Smart MCQ Solver", page_icon="ðŸŽ¯",
+st.set_page_config(page_title="Smart MCQ Solver", page_icon="🎯",
                    layout="centered", initial_sidebar_state="expanded")
 
 st.markdown("""
@@ -55,7 +55,7 @@ def full_text(df: pd.DataFrame) -> pd.Series:
             + df[LABELS].astype(str).agg(" ".join, axis=1))
 
 
-@st.cache_resource(show_spinner="Building the TF-IDF indexâ€¦")
+@st.cache_resource(show_spinner="Building the TF-IDF index…")
 def load_index():
     """Load train.csv once per container and fit the vectoriser."""
     app_dir = Path(__file__).resolve().parent
@@ -119,7 +119,7 @@ def predict(prompt, options, train, vec, X, answer_text):
     return [LABELS[i] for i in order[:3]], method, best, evidence, votes
 
 
-# â”€â”€ sidebar â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+# ── sidebar ────────────────────────────────────────────────────────────────
 train, vec, X, answer_text = load_index()
 if train is None:
     st.error("`data/train.csv` not found. Commit it so the app can build its index.")
@@ -148,20 +148,20 @@ in five.
 | Rank 3 | 0.333 |
 | Not in top 3 | 0.000 |
 """)
-    st.caption("Random guessing = 0.3667 Â· Final pipeline = **0.76475**")
+    st.caption("Random guessing = 0.3667 · Final pipeline = **0.76475**")
     st.markdown("---")
-    st.caption("Vihaan Bhambhani Â· 24f1002825\nBSDA2001P Â· Term T2-2026")
+    st.caption("Vihaan Bhambhani · 24f1002825\nBSDA2001P · Term T2-2026")
 
-# â”€â”€ main â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
-st.title("ðŸŽ¯ Smart MCQ Solver")
-st.caption("Stage-A duplicate matcher Â· public leaderboard MAP@3 **0.76475**")
+# ── main ───────────────────────────────────────────────────────────────────
+st.title("🎯 Smart MCQ Solver")
+st.caption("Stage-A duplicate matcher · public leaderboard MAP@3 **0.76475**")
 
 if "seed" not in st.session_state:
     st.session_state.seed = 0
     st.session_state.vals = ["", "", "", "", "", ""]
 
 c1, c2 = st.columns([1, 3])
-if c1.button("ðŸŽ² Load an example"):
+if c1.button("🎲 Load an example"):
     st.session_state.seed += 1
     row = train.sample(1, random_state=st.session_state.seed).iloc[0]
     st.session_state.vals = [row["prompt"]] + [row[c] for c in LABELS]
@@ -169,7 +169,7 @@ if c2.button("Clear"):
     st.session_state.vals = ["", "", "", "", "", ""]
 
 prompt = st.text_area("Question", value=st.session_state.vals[0], height=90,
-                      placeholder="Type or paste a multiple-choice questionâ€¦")
+                      placeholder="Type or paste a multiple-choice question…")
 cols = st.columns(2)
 options = [cols[i % 2].text_input(f"Option {LABELS[i]}",
                                   value=st.session_state.vals[i + 1])
@@ -211,7 +211,7 @@ if st.button("Predict", type="primary", width='stretch'):
             with st.expander("Matched training question"):
                 st.caption(f"cosine similarity {evidence[3]:.4f}")
                 st.write(evidence[0])
-                st.success(f"Its correct answer â€” **{evidence[1]}**: {evidence[2]}")
+                st.success(f"Its correct answer — **{evidence[1]}**: {evidence[2]}")
                 st.caption("Note the letter may differ from the prediction above: "
                            "options are shuffled between duplicates, so the match "
                            "is made on answer text and re-located in your options.")
@@ -221,5 +221,5 @@ if st.button("Predict", type="primary", width='stretch'):
                     "this happened for 21 of 500 rows.")
 
 st.divider()
-st.caption("Full pipeline (DeBERTa-v3-large + Qwen2.5-7B for ranks 2â€“3) requires "
+st.caption("Full pipeline (DeBERTa-v3-large + Qwen2.5-7B for ranks 2–3) requires "
            "a GPU and is not deployed here. Source: github.com/Vihaan-Bhambhani/DL-GenAI-Project")
