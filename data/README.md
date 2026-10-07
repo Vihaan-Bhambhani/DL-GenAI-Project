@@ -1,8 +1,13 @@
 # data/
 
-Competition data is **not committed** — it is distributed by Kaggle and excluded
-by `.gitignore` (`data/*.csv`). This file documents what belongs here and where
-to get it.
+The canonical training pipeline does **not** store competition CSVs in this
+directory. The competition files are supplied by Kaggle and the root-level
+`.gitignore` excludes `data/*.csv`.
+
+The **public Streamlit demo intentionally includes a copy of `train.csv`**
+under `app/streamlit/data/`. That copy is required because the deployed
+CPU-based retrieval demo builds its TF-IDF index directly from the training
+questions at runtime.
 
 ## Getting the data
 
@@ -14,8 +19,8 @@ to get it.
 └── test.csv
 ```
 
-**Locally**, download both files from the competition's Data tab and place them
-in this folder:
+**Locally**, download both files from the competition's Data tab and place
+them in this folder:
 
 ```
 data/
@@ -37,7 +42,7 @@ environments without edits.
 | `answer` | str | Correct option letter — **train only** |
 
 | Split | Rows |
-|---|---|
+|---|---:|
 | `train.csv` | 2,000 |
 | `test.csv` | 500 |
 
@@ -59,3 +64,6 @@ directly, and the analysis is in Section 3 of the competition notebook.
 ## Files written here
 
 None. All artefacts are written to `models/`.
+
+The deployed demo's bundled retrieval index lives separately at
+`app/streamlit/data/train.csv`.
