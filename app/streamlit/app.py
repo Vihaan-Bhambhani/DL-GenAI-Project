@@ -11,7 +11,7 @@ Stage A produces rank 1 on 479 of 500 test rows and scored 0.71446 standalone on
 the leaderboard, so it is both the largest single contributor and the only part
 that fits in a CPU container.
 
-Vihaan Bhambhani (24f1002825) · BSDA2001P T2-2026
+Vihaan Bhambhani
 """
 from __future__ import annotations
 
@@ -150,7 +150,7 @@ in five.
 """)
     st.caption("Random guessing = 0.3667 · Final pipeline = **0.76475**")
     st.markdown("---")
-    st.caption("Vihaan Bhambhani · 24f1002825\nBSDA2001P · Term T2-2026")
+    st.caption("Vihaan Bhambhani")
 
 # ── main ───────────────────────────────────────────────────────────────────
 st.title("🎯 Smart MCQ Solver")
