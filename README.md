@@ -381,6 +381,16 @@ The notebooks contain the complete experimentation workflow, milestone progressi
 
 ---
 
+# 📜 License
+
+The repository's source code is released under the **MIT License**.
+
+The competition dataset bundled with the public demo at
+`app/streamlit/data/train.csv` is **not covered by the code license** and remains
+subject to the terms under which that dataset was provided.
+
+---
+
 # 📌 Limitations
 
 The strongest retrieval-based advantage comes from the unusually high degree of train/test duplication present in this particular dataset.
